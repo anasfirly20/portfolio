@@ -9,9 +9,6 @@ const Navbar = () => {
   const handleClick = () => {
     setNav(!nav);
   };
-  const handleClose = () => {
-    setNav(false);
-  };
 
   let navigate = useNavigate();
 
@@ -43,6 +40,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
         {/* HIRE ME */}
         <div className="hidden md:flex items-center">
           <a href="https://t.me/anasfirly20" target="break">
@@ -70,7 +68,7 @@ const Navbar = () => {
           }
         >
           {navItems.map((item, id) => (
-            <li key={id} className="py-6 text-4xl" onClick={handleClose}>
+            <li key={id} className="py-6 text-4xl" onClick={handleClick}>
               {item === "Home" ? (
                 <Link to="/">{item}</Link>
               ) : (
