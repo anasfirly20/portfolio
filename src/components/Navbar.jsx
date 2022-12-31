@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { motion, AnimateSharedLayout } from "framer-motion";
+import { BsTelegram } from "react-icons/bs";
 
 const Navbar = () => {
   let navigate = useNavigate();
@@ -34,7 +34,15 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Hamburger */}
+      {/* Hire Me */}
+      <div className="my-auto">
+        <a href="https://t.me/anasfirly20" target="break">
+          <div className="text-[#2D2B2B] uppercase flex items-center gap-1 cursor-pointer">
+            HIRE ME
+            <BsTelegram className="text-[#2D2B2B]" />
+          </div>
+        </a>
+      </div>
     </div>
   );
 };
