@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BsTelegram } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
+import logo from "../assets/af-logo.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -24,7 +25,7 @@ const Navbar = () => {
             className="text-[#54433A] cursor-pointer"
             onClick={() => navigate("/")}
           >
-            AF20
+            <img src={logo} alt="logo" className="h-12 rounded-full" />
           </p>
         </div>
 
