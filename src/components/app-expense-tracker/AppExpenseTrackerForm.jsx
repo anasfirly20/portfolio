@@ -3,7 +3,9 @@ import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 
 // Toaster
-const notifyError = () => toast.error("Please add something");
+const notifyError1 = () => toast.error("Please add something");
+const notifyError2 = () => toast.error("Please add amount");
+const notifySuccess1 = () => toast.success("Successfully added");
 
 const AppExpenseTrackerForm = ({ onAdd }) => {
   // initial state for value of text & amount
@@ -14,13 +16,23 @@ const AppExpenseTrackerForm = ({ onAdd }) => {
   const onSubmit = (e) => {
     e.preventDefault();
 
+    // Error Toaster
     if (!text) {
-      notifyError();
+      notifyError1();
+      return;
+    }
+    if (amount === 0) {
+      notifyError2();
       return;
     }
 
+    // Items that will be added to text/amount (KFC / $100)
     onAdd({ text, amount });
 
+    // Success Toaster
+    notifySuccess1();
+
+    // Reset the text/amount to initial
     setText("");
     setAmount(Number(0));
   };
@@ -30,7 +42,7 @@ const AppExpenseTrackerForm = ({ onAdd }) => {
       <Toaster />
       <div className="flex flex-col mt-2 space-y-2">
         <form className="space-y-3" onSubmit={onSubmit}>
-          {/* Text */}
+          {/* Description */}
           <div className="mt-3">
             <label htmlFor="text" className="font-semibold">
               Description
