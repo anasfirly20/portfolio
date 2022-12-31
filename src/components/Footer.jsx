@@ -3,6 +3,7 @@ import {
   AiOutlineTwitter,
   AiOutlineLinkedin,
   AiOutlineWhatsApp,
+  AiOutlineGithub,
 } from "react-icons/ai";
 
 import { SlSocialVkontakte } from "react-icons/sl";
@@ -23,6 +24,9 @@ const Footer = () => {
         </a>
         <a href="https://twitter.com/anasfirly_" target="break">
           <AiOutlineTwitter />
+        </a>
+        <a href="https://github.com/anasfirly20" target="break">
+          <AiOutlineGithub />
         </a>
         <a href="https://vk.com/anasfirly20" target="break">
           <SlSocialVkontakte />
