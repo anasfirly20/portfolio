@@ -7,11 +7,12 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2D2B2B] font-exo text-[#e1dfde] text-center p-7 space-y-2">
-      <p className="font-semibold text-lg">
-        All Rights Reserved. Made By Anas Firly
-      </p>
-      <div className="flex justify-center gap-2 text-2xl">
+    <footer className="bg-[#2D2B2B] font-exo text-[#e1dfde] text-center p-6 space-y-3">
+      <div className="text-md space-y-1">
+        <p className>© 2023 FaoTech™. All Rights Reserved.</p>
+        <p className="">Made By Anas Firly</p>
+      </div>
+      <div className="flex justify-center gap-4 text-2xl">
         <a href="https://www.instagram.com/anasfirly_/" target="break">
           <AiOutlineInstagram />
         </a>
