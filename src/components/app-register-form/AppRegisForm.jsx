@@ -15,7 +15,6 @@ const AppRegisForm = () => {
         <div className="py-10 space-y-5">
           <h5 className="text-center text-4xl text-[#0D0D0D] font-semibold">
             Join Us!
-            {/* <span className="text-6xl">👨‍💻</span> */}
           </h5>
           <img src={logo} alt="join-us-svg" className="h-40 mx-auto" />
         </div>
