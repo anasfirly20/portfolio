@@ -19,7 +19,7 @@ const Navbar = () => {
   const navItems = ["Home", "Project", "About"];
 
   return (
-    <nav className="w-">
+    <nav className="">
       <div className="w-full flex justify-between h-[80px] px-5 sm:px-10 md:px-15 lg:px-20 bg-[#e1dfde] border-b-[3px] border-b-[#565759] border-opacity-10 font-exo font-bold">
         {/* logo */}
         <div className="flex items-center">
@@ -58,8 +58,6 @@ const Navbar = () => {
           className="md:hidden text-[#2D2B2B] my-auto text-3xl z-20 cursor-pointer"
           onClick={handleClick}
         >
-          {/* <GrClose /> */}
-          {/* <FiMenu /> */}
           {!nav ? <FiMenu /> : <GrClose />}
         </div>
 
@@ -68,7 +66,7 @@ const Navbar = () => {
           className={
             !nav
               ? "hidden"
-              : "absolute top-0 left-0 w-full h-screen bg-[#e1dfde] flex flex-col items-center justify-center text-[#2D2B2B] uppercase z-10"
+              : "absolute top-0 left-0 w-full min-h-screen bg-[#e1dfde] flex flex-col items-center justify-center text-[#2D2B2B] uppercase z-10"
           }
         >
           {navItems.map((item, id) => (
