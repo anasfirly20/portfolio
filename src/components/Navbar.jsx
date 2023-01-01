@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav className="">
-      <div className="w-full flex justify-between h-[80px] px-5 sm:px-10 md:px-15 lg:px-20 bg-[#e1dfde] border-b-[3px] border-b-[#565759] border-opacity-10 font-exo font-bold">
+      <div className=" w-full flex justify-between md:justify-evenly h-[80px] px-5 sm:px-10 md:px-15 lg:px-20 bg-[#e1dfde] border-b-[3px] border-b-[#565759] border-opacity-10 font-exo font-bold">
         {/* logo */}
         <div className="flex items-center">
           <p
@@ -47,9 +47,9 @@ const Navbar = () => {
         {/* HIRE ME */}
         <div className="hidden md:flex items-center">
           <a href="https://t.me/anasfirly20" target="break">
-            <div className="text-[#2D2B2B] uppercase flex items-center gap-1 cursor-pointer border-2 rounded-md border-[#2D2B2B] p-1">
-              HIRE ME
-              <BsTelegram className="text-[#2D2B2B]" />
+            <div className="text-[#2D2B2B] uppercase flex items-center gap-1 cursor-pointer border-2 rounded-md border-[#2D2B2B] p-[0.45rem] lg:px-12 hover:text-[#e1dfde] hover:bg-[#2D2B2B]  ">
+              Hire Me
+              <BsTelegram />
             </div>
           </a>
         </div>
