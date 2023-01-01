@@ -47,7 +47,7 @@ const Navbar = () => {
         {/* HIRE ME */}
         <div className="hidden md:flex items-center">
           <a href="https://t.me/anasfirly20" target="break">
-            <div className="text-[#2D2B2B] uppercase flex items-center gap-1 cursor-pointer border-2 rounded-md border-[#2D2B2B] p-[0.45rem] lg:px-12 hover:text-[#e1dfde] hover:bg-[#2D2B2B]  ">
+            <div className="transition ease-in-out delay-50 text-[#2D2B2B] uppercase flex items-center gap-1 cursor-pointer border-2 rounded-md border-[#2D2B2B] p-[0.45rem] lg:px-12 hover:text-[#e1dfde] hover:bg-[#2D2B2B]">
               Hire Me
               <BsTelegram />
             </div>
