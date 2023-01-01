@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import pict from "../../assets/man-dua.png";
-import { incrementZikr, resetZikr } from "../../redux/ducks/counterZikr";
+import { increment, resetZikr } from "../../redux/ducks/counterZikr";
 import Button from "../Button";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -18,8 +18,10 @@ const AppZikr = () => {
 
   // dispatch the functions for counterZikr
   const dispatch = useDispatch();
+
+  // function for onClick
   const handleIncrement = () => {
-    dispatch(incrementZikr());
+    dispatch(increment());
     setCountSyahada(countSyahada + 1);
 
     // condition to call toastify

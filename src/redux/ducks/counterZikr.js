@@ -1,7 +1,8 @@
+// Action types
 const INCREMENT = "incrementZikr";
 const RESET = "resetZikr";
 
-export const incrementZikr = () => ({
+export const increment = () => ({
   type: INCREMENT,
 });
 

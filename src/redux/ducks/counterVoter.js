@@ -1,18 +1,21 @@
 const INCREMENT = "incrementVoter";
 const DECREMENT = "decrementVoter";
 
-export const incrementVoter = () => ({
+// Actions
+export const increment = () => ({
   type: INCREMENT,
 });
 
-export const decrementVoter = () => ({
+export const decrement = () => ({
   type: DECREMENT,
 });
 
+// Initial state
 const initialState = {
   count: 0,
 };
 
+// Reducer
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:

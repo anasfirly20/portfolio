@@ -5,6 +5,8 @@ import { FiMenu } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import logo from "../assets/af-logo.png";
 
+import { motion } from "framer-motion";
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => {
@@ -53,12 +55,14 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger Menu */}
-        <div
+        <motion.div
           className="md:hidden text-[#2D2B2B] my-auto text-3xl z-20 cursor-pointer"
           onClick={handleClick}
+          animate={{ scale: nav ? 1 : 1, rotate: nav ? 90 : 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {!nav ? <FiMenu /> : <GrClose />}
-        </div>
+        </motion.div>
 
         {/* Mobile Menu */}
         <ul

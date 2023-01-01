@@ -10,7 +10,7 @@ const ProjectList = () => {
     "To-do App",
     "Calculator App",
     "Voter App",
-    // "Redux-Test",
+    "Redux-Test",
   ];
 
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
-import { incrementVoter, decrementVoter } from "../../redux/ducks/counterVoter";
+import { increment, decrement } from "../../redux/ducks/counterVoter";
 import Button from "../Button";
 
 // Toaster
@@ -13,13 +13,13 @@ function AppVoterCounter({ name }) {
   const [voteCount, setVoteCount] = useState(0);
 
   const handleIncrement = () => {
-    dispatch(incrementVoter());
+    dispatch(increment());
     setVoteCount(voteCount + 1);
     notifySuccess();
   };
 
   const handleDecrement = () => {
-    dispatch(decrementVoter());
+    dispatch(decrement());
     setVoteCount(voteCount - 1);
     notifyFail();
   };
