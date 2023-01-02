@@ -8,7 +8,7 @@ import Input from "../Input";
 
 // Toaster functions
 const notifySuccess = () => toast.success("Registered");
-const notifyFail = () => toast.error("Please Fill In All The Forms");
+const notifyFail = () => toast.error("Please Fill In All The Fields");
 const notifyPassNotMatch = () => toast.error("Password Do Not match");
 const notifyCheckBox = () =>
   toast.error("Please Agree to terms and conditions");
