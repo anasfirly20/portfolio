@@ -5,35 +5,49 @@ import {
   AiOutlineWhatsApp,
   AiOutlineGithub,
 } from "react-icons/ai";
-
 import { SlSocialVkontakte } from "react-icons/sl";
+
+// Footer icons
+const iconsFooter = [
+  {
+    icon: <AiOutlineLinkedin />,
+    href: "https://www.linkedin.com/in/anasfirly20/",
+  },
+  {
+    icon: <AiOutlineInstagram />,
+    href: "https://www.instagram.com/anasfirly_/",
+  },
+  {
+    icon: <AiOutlineTwitter />,
+    href: "https://twitter.com/anasfirly_",
+  },
+  {
+    icon: <AiOutlineGithub />,
+    href: "https://github.com/anasfirly20",
+  },
+  {
+    icon: <SlSocialVkontakte />,
+    href: "https://vk.com/anasfirly20",
+  },
+  {
+    icon: <AiOutlineWhatsApp />,
+    href: "https://wa.me/79625556174",
+  },
+];
 
 const Footer = () => {
   return (
     <footer className="bg-[#2D2B2B] font-exo text-[#e1dfde] text-center p-6 space-y-3">
-      <div className="text-md space-y-1">
-        <p className>© 2023 FaoTech™. All Rights Reserved.</p>
-        <p className="">Made By Anas Firly</p>
+      <div className="text-sm md:flex justify-center gap-1">
+        <p className>Copyright © 2022 FaoTech™ – Anas Firly.</p>
+        <p className="">All Rights Reserved.</p>
       </div>
       <div className="flex justify-center gap-4 text-2xl">
-        <a href="https://www.linkedin.com/in/anasfirly20/" target="break">
-          <AiOutlineLinkedin />
-        </a>
-        <a href="https://www.instagram.com/anasfirly_/" target="break">
-          <AiOutlineInstagram />
-        </a>
-        <a href="https://twitter.com/anasfirly_" target="break">
-          <AiOutlineTwitter />
-        </a>
-        <a href="https://github.com/anasfirly20" target="break">
-          <AiOutlineGithub />
-        </a>
-        <a href="https://vk.com/anasfirly20" target="break">
-          <SlSocialVkontakte />
-        </a>
-        <a href="https://wa.me/79625556174" target="break">
-          <AiOutlineWhatsApp />
-        </a>
+        {iconsFooter.map(({ icon, href }) => (
+          <a href={href} target="break">
+            {icon}
+          </a>
+        ))}
       </div>
     </footer>
   );
