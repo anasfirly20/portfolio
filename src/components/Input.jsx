@@ -1,19 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const RegisterInput = ({
-  type,
-  name,
-  id,
-  placeholder,
-  className,
-  value,
-  onChange,
-}) => {
+const Input = ({ type, name, id, placeholder, className, value, onChange }) => {
   return (
     <>
-      <motion.input
+      <input
         className={className}
+        name={name}
         id={id}
         type={type}
         placeholder={placeholder}
@@ -25,4 +18,4 @@ const RegisterInput = ({
   );
 };
 
-export default RegisterInput;
+export default Input;

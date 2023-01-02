@@ -1,6 +1,6 @@
 import React from "react";
 
-const RegisterInputLabel = ({ className, htmlFor, text }) => {
+const InputLabel = ({ className, htmlFor, text }) => {
   return (
     <>
       <label htmlFor={htmlFor} className={className}>
@@ -10,4 +10,4 @@ const RegisterInputLabel = ({ className, htmlFor, text }) => {
   );
 };
 
-export default RegisterInputLabel;
+export default InputLabel;

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
+import Input from "../Input";
+import InputLabel from "../InputLabel";
 
 // Toaster
 const notifyError1 = () => toast.error("Please add something");
@@ -44,10 +46,12 @@ const AppExpenseTrackerForm = ({ onAdd }) => {
         <form className="space-y-3" onSubmit={onSubmit}>
           {/* Description */}
           <div className="mt-3">
-            <label htmlFor="text" className="font-semibold">
-              Description
-            </label>
-            <input
+            <InputLabel
+              htmlFor="text"
+              className="font-semibold"
+              text="Description"
+            />
+            <Input
               type="text"
               name="text"
               id="text"
@@ -67,7 +71,7 @@ const AppExpenseTrackerForm = ({ onAdd }) => {
               <span>Amount</span>
               <span>(positive - income, negative - expense)</span>
             </label>
-            <input
+            <Input
               type="number"
               id="amount"
               placeholder="Enter Amount..."
@@ -78,11 +82,10 @@ const AppExpenseTrackerForm = ({ onAdd }) => {
           </div>
 
           {/* Submit Button */}
-          <motion.input
+          <Input
             type="submit"
             value="Add Transaction"
-            className="w-full py-3 rounded-lg cursor-pointer bg-[#009176] hover:bg-[#00A888] active:bg-[#009176] font-bold text-white"
-            whileTap={{ scale: 0.95 }}
+            className="w-full py-3 rounded-lg cursor-pointer bg-[#009176] hover:bg-[#00A888] active:bg-[#009176] font-bold text-white transition ease-in-out -translate-y-1 active:scale-95"
           />
         </form>
       </div>
