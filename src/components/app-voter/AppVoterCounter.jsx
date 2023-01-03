@@ -25,7 +25,7 @@ function AppVoterCounter({ name }) {
   };
 
   return (
-    <div className="text-slate-100 bg-gradient-to-r from-[#56042C] via-[#56042C] to-[#56042C] py-16 px-16 rounded-xl space-y-2">
+    <div className="text-slate-100 bg-gradient-to-r from-[#560421] to-[#56042C] py-16 px-16 rounded-xl space-y-2">
       <Toaster />
       <p className="text-3xl">{name}</p>
       <p>Votes: {voteCount}</p>

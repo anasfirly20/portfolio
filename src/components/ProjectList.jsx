@@ -10,6 +10,7 @@ const ProjectList = () => {
     "To-do App",
     "Calculator App",
     "Voter App",
+    // "Expense Tracker-v2",
     // "Redux-Test",
   ];
 

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { motion } from "framer-motion";
 
-const Button = ({ className, onClick, text }) => {
+const Button = ({ className, onClick, text, icon }) => {
   return (
     <>
       <motion.button
@@ -10,6 +10,7 @@ const Button = ({ className, onClick, text }) => {
         whileTap={{ scale: 0.95 }}
       >
         {text}
+        {icon}
       </motion.button>
     </>
   );

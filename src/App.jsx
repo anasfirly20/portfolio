@@ -16,6 +16,7 @@ import AppExpenseTracker from "./components/app-expense-tracker/AppExpenseTracke
 import AppCalculator from "./components/app-calculator/AppCalculator";
 import AppVoter from "./components/app-voter/AppVoter";
 import ReduxTest from "./components/ReduxTest";
+import ExpenseV2 from "./components/app-expense-tracker-v2/ExpenseV2";
 
 // miscellanous components
 import Navbar from "./components/Navbar";
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="to-do-app" element={<Todo />} />
           <Route path="calculator-app" element={<AppCalculator />} />
           <Route path="voter-app" element={<AppVoter />} />
+          <Route path="expense-tracker-v2" element={<ExpenseV2 />} />
           <Route path="redux-test" element={<ReduxTest />} />
         </Route>
         <Route path="/FAQ" element={<FAQ />} />
