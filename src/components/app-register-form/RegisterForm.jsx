@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import RegisterInput from "./RegisterInput";
-import RegisterInputLabel from "./RegisterInputLabel";
-import Button from "../Button";
 import toast, { Toaster } from "react-hot-toast";
 import InputLabel from "../InputLabel";
 import Input from "../Input";
+import emailjs from "emailjs-com";
 
 // Toaster functions
 const notifySuccess = () => toast.success("Registered");
@@ -54,6 +52,19 @@ const RegisterForm = () => {
     } else {
       notifyFail();
     }
+
+    emailjs
+      .sendForm("gmail", "template_v97pp3e", e.target, "DRhkfav3kde6rcZ-n")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    e.reset();
   };
 
   return (
@@ -64,7 +75,7 @@ const RegisterForm = () => {
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
             <InputLabel
-              htmlFor="full-name"
+              htmlFor="fullname"
               className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
               text="Full Name"
             />
@@ -72,8 +83,8 @@ const RegisterForm = () => {
           <div className="md:w-2/3">
             <Input
               type="text"
-              name="full-name"
-              id="full-name"
+              name="fullname"
+              id="fullname"
               placeholder="Uvuvwevweve Ossas"
               className="bg-slate-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-[#00C78E]"
               value={name}
@@ -127,7 +138,7 @@ const RegisterForm = () => {
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
             <InputLabel
-              htmlFor="confirm-password"
+              htmlFor="confirmpassword"
               className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
               text="Confirm Password"
             />
@@ -135,8 +146,8 @@ const RegisterForm = () => {
           <div className="md:w-2/3">
             <Input
               type="password"
-              name="password"
-              id="confirm-password"
+              name="confirmpassword"
+              id="confirmpassword"
               placeholder="********"
               className="bg-slate-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-[#00C78E]"
               value={confirmPass}
