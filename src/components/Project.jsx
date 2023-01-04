@@ -12,10 +12,12 @@ const Project = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-center p-5 font-semibold underline text-[#0D0D0D]">
-          My Projects
-        </h1>
-        <ProjectList />
+        <div className="flex flex-col mt-10">
+          <h1 className="text-center p-5 font-semibold text-[#0D0D0D]">
+            Created with react
+          </h1>
+          <ProjectList />
+        </div>
       </motion.div>
     </section>
   );

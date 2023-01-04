@@ -43,8 +43,8 @@ const Footer = () => {
         <p className="">All Rights Reserved.</p>
       </div>
       <div className="flex justify-center gap-4 text-2xl">
-        {iconsFooter.map(({ icon, href }) => (
-          <a href={href} target="break">
+        {iconsFooter.map(({ icon, href }, index) => (
+          <a key={index} href={href} target="break">
             {icon}
           </a>
         ))}

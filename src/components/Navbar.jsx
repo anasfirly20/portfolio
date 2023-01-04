@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { BsTelegram } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
@@ -8,6 +8,7 @@ import logo from "../assets/af-logo.png";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  // useState for closing hamburger menu
   const [nav, setNav] = useState(false);
   const handleClick = () => {
     setNav(!nav);
@@ -16,7 +17,28 @@ const Navbar = () => {
   let navigate = useNavigate();
 
   // Navbar Menu
-  const navItems = ["Home", "Project", "About"];
+  const navItems = [
+    {
+      path: "/",
+      label: "Home",
+      exact: true,
+    },
+    {
+      path: "/project",
+      label: "Project",
+      exact: false,
+    },
+    {
+      path: "/about",
+      label: "About",
+      exact: false,
+    },
+    // {
+    //   path: "/credits",
+    //   label: "Credits",
+    //   exact: false,
+    // },
+  ];
 
   return (
     <nav className="">
@@ -31,15 +53,19 @@ const Navbar = () => {
           </p>
         </div>
 
-        {/* nav menu */}
-        <ul className="hidden md:flex space-x-5 text-[#2D2B2B] uppercase items-center">
-          {navItems.map((item, id) => (
-            <li key={id}>
-              {item === "Home" ? (
-                <Link to="/">{item}</Link>
-              ) : (
-                <Link to={`/${item.toLowerCase()}`}>{item}</Link>
-              )}
+        {/* Nav menu */}
+        <ul className="hidden md:flex space-x-5 uppercase items-center">
+          {navItems.map(({ path, label, exact }) => (
+            <li key={label}>
+              <NavLink
+                to={path}
+                exact={exact}
+                className={({ isActive }) =>
+                  isActive ? "text-[#2D2B2B]" : "text-[#2D2B2B] opacity-50"
+                }
+              >
+                {label}
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -72,13 +98,17 @@ const Navbar = () => {
               : "absolute top-0 left-0 w-full min-h-screen bg-[#e1dfde] flex flex-col items-center justify-center text-[#2D2B2B] uppercase z-10"
           }
         >
-          {navItems.map((item, id) => (
-            <li key={id} className="py-6 text-4xl" onClick={handleClick}>
-              {item === "Home" ? (
-                <Link to="/">{item}</Link>
-              ) : (
-                <Link to={`/${item.toLowerCase()}`}>{item}</Link>
-              )}
+          {navItems.map(({ path, label, exact }) => (
+            <li key={label} className="py-6 text-4xl" onClick={handleClick}>
+              <NavLink
+                to={path}
+                exact={exact}
+                className={({ isActive }) =>
+                  isActive ? "text-[#2D2B2B]" : "text-[#2D2B2B] opacity-50"
+                }
+              >
+                {label}
+              </NavLink>
             </li>
           ))}
         </ul>

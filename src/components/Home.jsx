@@ -19,12 +19,12 @@ const Home = () => {
     >
       <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 class="text-4xl mb-4 font-semibold text-[#2D2B2B]">
+          <h1 class="w-full text-4xl mb-4 font-semibold text-[#2D2B2B] text-start">
             Hi there! 👋
-            <br class="hidden md:inline-block" /> I am{" "}
+            <br class="md:inline-block" /> I am{" "}
             <span className="font-bold">Firly</span>
           </h1>
-          <p class="mb-8 leading-relaxed font-semibold text-[#484645]">
+          <p class="mb-8 leading-relaxed font-semibold text-[#484645] text-left flex">
             As a new web developer with a strong foundation in HTML, CSS, and
             JavaScript, and proficiency in React and Tailwind CSS. I am
             dedicated to delivering high-quality work and continuously learning
@@ -32,10 +32,10 @@ const Home = () => {
             new technologies and excited to bring my passion for technology and
             problem-solving to every project.
           </p>
-          <div>
+          <div className="flex w-full">
             <Button
               text={`My Projects`}
-              className="flex items-center gap-2 text-[#e1dfde] bg-[#2D2B2B] border-0 py-2 px-6 focus:outline-none rounded-lg text-lg"
+              className="flex items-center gap-2 text-[#e1dfde] bg-[#2D2B2B] border-0 px-[1rem] py-2 sm:px-6 focus:outline-none rounded-lg text-lg"
               onClick={() => navigate("/project")}
               icon={<HiArrowNarrowRight />}
             />
@@ -46,7 +46,6 @@ const Home = () => {
             class="object-cover object-center rounded"
             alt="hero"
             src={img}
-            // src="https://dummyimage.com/720x600"
           />
         </div>
       </div>

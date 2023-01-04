@@ -6,7 +6,7 @@ import "./App.css";
 import Home from "./components/Home";
 import Project from "./components/Project";
 import About from "./components/About";
-import FAQ from "./components/FAQ";
+import Credits from "./components/Credits";
 
 // Apps
 import Todo from "./components/app-to-do/Todo";
@@ -31,7 +31,6 @@ const App = () => {
       <Navbar />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
         {/* Nested Projects Route */}
         <Route path="/project">
           <Route index element={<Project />} />
@@ -44,7 +43,8 @@ const App = () => {
           <Route path="expense-tracker-v2" element={<ExpenseV2 />} />
           <Route path="redux-test" element={<ReduxTest />} />
         </Route>
-        <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/credits" element={<Credits />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
