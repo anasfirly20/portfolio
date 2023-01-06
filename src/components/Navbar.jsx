@@ -55,11 +55,10 @@ const Navbar = () => {
 
         {/* Nav menu */}
         <ul className="hidden md:flex space-x-5 uppercase items-center">
-          {navItems.map(({ path, label, exact }) => (
+          {navItems.map(({ path, label }) => (
             <li key={label}>
               <NavLink
                 to={path}
-                exact={exact}
                 className={({ isActive }) =>
                   isActive ? "text-[#2D2B2B]" : "text-[#2D2B2B] opacity-50"
                 }
@@ -98,11 +97,10 @@ const Navbar = () => {
               : "absolute top-0 left-0 w-full min-h-screen bg-[#e1dfde] flex flex-col items-center justify-center text-[#2D2B2B] uppercase z-10"
           }
         >
-          {navItems.map(({ path, label, exact }) => (
+          {navItems.map(({ path, label }) => (
             <li key={label} className="py-6 text-4xl" onClick={handleClick}>
               <NavLink
                 to={path}
-                exact={exact}
                 className={({ isActive }) =>
                   isActive ? "text-[#2D2B2B]" : "text-[#2D2B2B] opacity-50"
                 }
