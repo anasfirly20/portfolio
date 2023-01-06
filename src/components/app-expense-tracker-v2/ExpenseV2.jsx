@@ -97,7 +97,7 @@ const ExpenseV2 = () => {
 
         <div>
           {/* Transaction */}
-          <form className="text-center space-y-3 lg:mt-24">
+          <form className="text-center space-y-3 mt-8 lg:mt-24">
             <h3 className="text-[#2D3B3B] text-xl font-semibold">
               Transaction
             </h3>
@@ -133,7 +133,7 @@ const ExpenseV2 = () => {
             />
           </form>
           {/* History */}
-          <div className="space-y-3 w-[80%] sm:w-[73%] md:w-[47%] lg:w-[60%] mx-auto mt-10 lg:mt-20">
+          <div className="space-y-3 w-[80%] sm:w-[73%] md:w-[47%] lg:w-[60%] mx-auto mt-8 lg:mt-20">
             <h3 className="text-[#2D3B3B] text-xl font-semibold text-center">
               History
             </h3>
