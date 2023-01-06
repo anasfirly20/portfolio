@@ -22,7 +22,7 @@ const ExpenseTracker = () => {
   };
 
   return (
-    <main className="min-h-screen relative w-full text-[#2D2B2B] font-exo">
+    <section className="w-full text-[#2D2B2B] font-exo mb-[12vh] px-[4vw]">
       <h1 className="text-center text-2xl font-semibold mt-5">
         Expense Tracker
       </h1>
@@ -106,7 +106,7 @@ const ExpenseTracker = () => {
           <AppExpenseTrackerForm onAdd={addHistory} />
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

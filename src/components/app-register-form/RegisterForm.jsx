@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import InputLabel from "../InputLabel";
 import Input from "../Input";
@@ -17,8 +17,6 @@ const RegisterForm = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
-  const validRegex =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
   useEffect(() => {
     const allFieldsFilled =
@@ -64,7 +62,10 @@ const RegisterForm = () => {
         }
       );
 
-    e.reset();
+    setName("");
+    setEmail("");
+    setPass("");
+    setConfirmPass("");
   };
 
   return (

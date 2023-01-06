@@ -11,20 +11,21 @@ const Home = () => {
 
   return (
     <motion.section
-      class="text-gray-600 body-font min-h-screen font-exo"
+      class="text-gray-600 body-font font-exo min-h-[70vh]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <h1 class="w-full text-4xl mb-4 font-semibold text-[#2D2B2B] text-start">
+      <div class="w-full flex px-[4vw] my-[10vh] justify-center flex-wrap md:flex-row items-center">
+        {/* TITLE */}
+        <div class="w-[100%] md:w-[40%] lg:w-[40%]">
+          <h1 class="text-4xl mb-[2vh] font-semibold text-[#2D2B2B] text-start">
             Hi there! 👋
             <br class="md:inline-block" /> I am{" "}
             <span className="font-bold">Firly</span>
           </h1>
-          <p class="mb-8 leading-relaxed font-semibold text-[#484645] text-left flex">
+          <p class="mb-[2vh] leading-relaxed font-semibold text-[#484645] text-left relative">
             As a new web developer with a strong foundation in HTML, CSS, and
             JavaScript, and proficiency in React and Tailwind CSS. I am
             dedicated to delivering high-quality work and continuously learning
@@ -41,9 +42,10 @@ const Home = () => {
             />
           </div>
         </div>
-        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        {/* IMG */}
+        <div class="w-[450px] md:w-[50%] lg:w-[40%] mx-auto max-md:mt-8">
           <img
-            class="object-cover object-center rounded"
+            class="object-cover object-center rounded w-full"
             alt="hero"
             src={img}
           />
@@ -54,17 +56,3 @@ const Home = () => {
 };
 
 export default Home;
-
-/*
-<motion.section
-      className="min-h-screen w-full"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-    >
-      <div className="min-h-screen flex items-center justify-center font-exo text-[#2D2B2B]">
-        <h3 className="text-5xl font-semibold">Salut! 👋</h3>
-      </div>
-    </motion.section>
-*/
