@@ -37,8 +37,8 @@ const iconsFooter = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2D2B2B] font-exo text-[#e1dfde] text-center py-[3vh] px-[6vw] lg:px-[10vw] space-y-3">
-      <div className="text-sm md:flex justify-center gap-1">
+    <footer className="space-y-3 bg-[#2D2B2B] py-[3vh] px-[6vw] text-center font-exo text-[#e1dfde] lg:px-[10vw]">
+      <div className="justify-center gap-1 text-sm md:flex">
         <p className>Copyright © 2022 FaoTech™ – Anas Firly.</p>
         <p className="">All Rights Reserved.</p>
       </div>

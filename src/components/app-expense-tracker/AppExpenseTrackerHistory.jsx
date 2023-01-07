@@ -12,7 +12,7 @@ const AppExpenseTrackerHistory = ({
     <>
       <div className="flex flex-row gap-2">
         <div
-          className={`${className} relative flex justify-between bg-white shadow-sm shadow-black p-1 border-r-4 rounded-sm group`}
+          className={`${className} group relative flex justify-between rounded-sm border-r-4 bg-white p-1 shadow-sm shadow-black`}
         >
           <h2>{text}</h2>
           <p>{amount}</p>
@@ -21,7 +21,7 @@ const AppExpenseTrackerHistory = ({
             onClick={() => onDelete(id)}
           > */}
           <AiOutlineDelete
-            className="w-8 h-8 hidden group-hover:block absolute -bottom-[-0.05rem] -left-8 cursor-pointer"
+            className="absolute -bottom-[-0.05rem] -left-8 hidden h-8 w-8 cursor-pointer group-hover:block"
             onClick={() => {
               onDelete(id);
             }}

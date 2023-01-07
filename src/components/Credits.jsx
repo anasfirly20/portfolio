@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Credits = () => {
   return (
-    <section className="min-h-screen relative flex items-center justify-center font-exo text-[#2D2B2B]">
+    <section className="relative flex min-h-screen items-center justify-center font-exo text-[#2D2B2B]">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

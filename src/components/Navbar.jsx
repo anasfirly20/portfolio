@@ -41,11 +41,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-10 w-full flex justify-between h-[80px] px-[6vw] lg:px-[10vw] bg-[#e1dfde] border-b-[3px] border-b-[#565759] border-opacity-10 font-exo font-bold">
+    <nav className="sticky top-0 z-10 flex h-[80px] w-full justify-between border-b-[3px] border-b-[#565759] border-opacity-10 bg-[#e1dfde] px-[6vw] font-exo font-bold lg:px-[10vw]">
       {/* logo */}
-      <div className="block my-auto">
+      <div className="my-auto block">
         <p
-          className="text-[#54433A] cursor-pointer"
+          className="cursor-pointer text-[#54433A]"
           onClick={() => navigate("/")}
         >
           <img src={logo} alt="logo" className="h-12 rounded-full" />
@@ -53,7 +53,7 @@ const Navbar = () => {
       </div>
 
       {/* Nav menu */}
-      <ul className="hidden md:flex items-center gap-x-8 uppercase ml-[8vw]">
+      <ul className="ml-[8vw] hidden items-center gap-x-8 uppercase md:flex">
         {navItems.map(({ path, label }) => (
           <li key={label}>
             <NavLink
@@ -69,9 +69,9 @@ const Navbar = () => {
       </ul>
 
       {/* HIRE ME */}
-      <div className="hidden my-auto md:block">
+      <div className="my-auto hidden md:block">
         <a href="https://t.me/anasfirly20" target="break">
-          <div className="transition ease-in-out delay-50 text-[#2D2B2B] uppercase flex items-center gap-1 cursor-pointer border-2 rounded-md border-[#2D2B2B] p-[0.45rem] lg:px-12 hover:text-[#e1dfde] hover:bg-[#2D2B2B]">
+          <div className="delay-50 flex cursor-pointer items-center gap-1 rounded-md border-2 border-[#2D2B2B] p-[0.45rem] uppercase text-[#2D2B2B] transition ease-in-out hover:bg-[#2D2B2B] hover:text-[#e1dfde] lg:px-12">
             Hire Me
             <BsTelegram />
           </div>
@@ -80,7 +80,7 @@ const Navbar = () => {
 
       {/* Hamburger Menu */}
       <motion.div
-        className="md:hidden text-[#2D2B2B] my-auto text-3xl z-20 cursor-pointer"
+        className="z-20 my-auto cursor-pointer text-3xl text-[#2D2B2B] md:hidden"
         onClick={handleClick}
         animate={{ scale: nav ? 1 : 1, rotate: nav ? 90 : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -93,7 +93,7 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : "absolute top-0 left-0 w-full min-h-screen bg-[#e1dfde] flex flex-col items-center justify-center text-[#2D2B2B] uppercase z-10"
+            : "absolute top-0 left-0 z-10 flex min-h-screen w-full flex-col items-center justify-center bg-[#e1dfde] uppercase text-[#2D2B2B]"
         }
       >
         {navItems.map(({ path, label }) => (

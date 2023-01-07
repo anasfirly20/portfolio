@@ -42,7 +42,7 @@ const AppExpenseTrackerForm = ({ onAdd }) => {
   return (
     <>
       <Toaster />
-      <div className="flex flex-col mt-2 space-y-2">
+      <div className="mt-2 flex flex-col space-y-2">
         <form className="space-y-3" onSubmit={onSubmit}>
           {/* Description */}
           <div className="mt-3">
@@ -56,7 +56,7 @@ const AppExpenseTrackerForm = ({ onAdd }) => {
               name="text"
               id="text"
               placeholder="Example: KFC"
-              className="bg-white w-full rounded-sm h-8 p-2"
+              className="h-8 w-full rounded-sm bg-white p-2"
               value={text}
               onChange={(e) => setText(e.target.value)}
             />
@@ -66,7 +66,7 @@ const AppExpenseTrackerForm = ({ onAdd }) => {
           <div>
             <label
               htmlFor="amount"
-              className="flex flex-col font-semibold -space-y-1"
+              className="flex flex-col -space-y-1 font-semibold"
             >
               <span>Amount</span>
               <span>(positive - income, negative - expense)</span>
@@ -75,7 +75,7 @@ const AppExpenseTrackerForm = ({ onAdd }) => {
               type="number"
               id="amount"
               placeholder="Enter Amount..."
-              className="bg-white w-full rounded-sm h-8 p-2"
+              className="h-8 w-full rounded-sm bg-white p-2"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
             />
@@ -85,7 +85,7 @@ const AppExpenseTrackerForm = ({ onAdd }) => {
           <Input
             type="submit"
             value="Add Transaction"
-            className="w-full py-3 rounded-lg cursor-pointer bg-[#009176] hover:bg-[#00A888] active:bg-[#009176] font-bold text-white transition ease-in-out -translate-y-1 active:scale-95"
+            className="w-full -translate-y-1 cursor-pointer rounded-lg bg-[#009176] py-3 font-bold text-white transition ease-in-out hover:bg-[#00A888] active:scale-95 active:bg-[#009176]"
           />
         </form>
       </div>

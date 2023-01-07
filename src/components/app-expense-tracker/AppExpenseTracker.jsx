@@ -22,14 +22,14 @@ const ExpenseTracker = () => {
   };
 
   return (
-    <section className="w-full text-[#2D2B2B] font-exo mb-[12vh] px-[4vw]">
-      <h1 className="text-center text-2xl font-semibold mt-5">
+    <section className="mb-[12vh] w-full px-[4vw] font-exo text-[#2D2B2B]">
+      <h1 className="mt-5 text-center text-2xl font-semibold">
         Expense Tracker
       </h1>
-      <div className="card flex flex-col mx-auto h-full w-96 mt-5 space-y-5">
+      <div className="card mx-auto mt-5 flex h-full w-96 flex-col space-y-5">
         {/* Balance */}
         <div className="flex flex-col text-2xl">
-          <h2 className="uppercase text-sm font-semibold">Your Balance</h2>
+          <h2 className="text-sm font-semibold uppercase">Your Balance</h2>
           <p className="font-bold">
             $
             {history.reduce(
@@ -42,7 +42,7 @@ const ExpenseTracker = () => {
         </div>
 
         {/* Income / Expense Card */}
-        <div className="grid grid-cols-2 h-20 mt-2 bg-white shadow-lg rounded-md divide-x">
+        <div className="mt-2 grid h-20 grid-cols-2 divide-x rounded-md bg-white shadow-lg">
           <AppExpenseTrackerCard
             type="Income"
             className="text-green-600"
@@ -69,7 +69,7 @@ const ExpenseTracker = () => {
 
         {/* History */}
         <div className="flex flex-col space-y-3">
-          <h3 className="font-bold text-xl border-b-2 border-[#565759] border-opacity-10">
+          <h3 className="border-b-2 border-[#565759] border-opacity-10 text-xl font-bold">
             History
           </h3>
           <div className="space-y-2">
@@ -79,7 +79,7 @@ const ExpenseTracker = () => {
                   key={id}
                   text={`${text}`}
                   amount={amount}
-                  className="border-r-green-500 w-full"
+                  className="w-full border-r-green-500"
                   onDelete={deleteHistory}
                   id={id}
                 />
@@ -88,7 +88,7 @@ const ExpenseTracker = () => {
                   key={id}
                   text={`${text}`}
                   amount={amount}
-                  className="border-r-red-500 w-full"
+                  className="w-full border-r-red-500"
                   onDelete={deleteHistory}
                   id={id}
                 />
@@ -99,7 +99,7 @@ const ExpenseTracker = () => {
 
         {/* Add new transaction */}
         <div className="flex flex-col">
-          <h3 className="font-bold text-xl border-b-2 border-[#565759] border-opacity-10">
+          <h3 className="border-b-2 border-[#565759] border-opacity-10 text-xl font-bold">
             Add new transaction
           </h3>
           {/* FORM for adding */}

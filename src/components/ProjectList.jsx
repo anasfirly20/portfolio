@@ -16,15 +16,15 @@ const ProjectList = () => {
 
   return (
     <>
-      <ul className="flex flex-wrap justify-center gap-5 p-5 font-exo font-semibold text-xl">
+      <ul className="flex flex-wrap justify-center gap-5 p-5 font-exo text-xl font-semibold">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-[#2D2B2B] h-[10rem] w-[10rem] rounded-2xl text-center hover:shadow-md hover:shadow-[#363534] p-5"
+            className="h-[10rem] w-[10rem] rounded-2xl bg-[#2D2B2B] p-5 text-center hover:shadow-md hover:shadow-[#363534]"
             whileHover={{ scale: 1.05 }}
           >
             <Link
-              className="w-full h-full flex justify-center items-center"
+              className="flex h-full w-full items-center justify-center"
               to={`/project/${project.toLowerCase().replace(" ", "-")}`}
             >
               {project}

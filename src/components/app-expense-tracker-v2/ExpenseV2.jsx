@@ -48,17 +48,17 @@ const config = {
 
 const ExpenseV2 = () => {
   return (
-    <section className="min-h-screen font-exo mx-[4vw] mb-[4vh]">
-      <h1 className="text-center text-[#E1DFDE] text-4xl mt-10 border-2 bg-[#2D2B2B] mx-4 sm:mx-16 md:mx-20 lg:mx-32 py-3 rounded-md">
+    <section className="mx-[4vw] mb-[4vh] min-h-screen font-exo">
+      <h1 className="mx-4 mt-10 rounded-md border-2 bg-[#2D2B2B] py-3 text-center text-4xl text-[#E1DFDE] sm:mx-16 md:mx-20 lg:mx-32">
         Expense Tracker v2.0
       </h1>
       <div className="lg:grid lg:grid-cols-2">
         {/* Doughnut Chart */}
         <div className="">
-          <div className="text-center lg:text- text-[#2D2B2B] mt-10 text-2xl">
-            <div className="w-[23rem] h-[24rem] sm:w-[25rem] sm:h-[25rem] top-[40%] relative mx-auto lg:mx-auto">
+          <div className="lg:text- mt-10 text-center text-2xl text-[#2D2B2B]">
+            <div className="relative top-[40%] mx-auto h-[24rem] w-[23rem] sm:h-[25rem] sm:w-[25rem] lg:mx-auto">
               <Doughnut {...config} />
-              <h3 className="absolute font-bold right-0 left-0 top-[45%] lg:right-40 lg:left-40">
+              <h3 className="absolute right-0 left-0 top-[45%] font-bold lg:right-40 lg:left-40">
                 Total
                 <span className="block text-3xl text-green-500">${0}</span>
               </h3>
@@ -66,26 +66,26 @@ const ExpenseV2 = () => {
           </div>
 
           {/* Masuk dari History */}
-          <div className="flex flex-col mt-10 text-[#2D3B3B] space-y-3 sm:w-[73%] md:w-[47%] lg:w-[100%] mx-auto font-semibold">
+          <div className="mx-auto mt-10 flex flex-col space-y-3 font-semibold text-[#2D3B3B] sm:w-[73%] md:w-[47%] lg:w-[100%]">
             {/* Investment */}
-            <div className="flex gap-2 relative lg:mx-auto lg:w-1/2">
-              <span className="border-l-8 border-l-yellow-500 rounded-full shadow-lg"></span>
+            <div className="relative flex gap-2 lg:mx-auto lg:w-1/2">
+              <span className="rounded-full border-l-8 border-l-yellow-500 shadow-lg"></span>
               Investment
               <span className="absolute right-0 font-bold lg:left-[23rem]">
                 0%
               </span>
             </div>
             {/* Expense */}
-            <div className="flex gap-2 relative lg:mx-auto lg:w-1/2">
-              <span className="border-l-8 border-[#ff6384] rounded-full shadow-2xl"></span>
+            <div className="relative flex gap-2 lg:mx-auto lg:w-1/2">
+              <span className="rounded-full border-l-8 border-[#ff6384] shadow-2xl"></span>
               Expense
               <span className="absolute right-0 font-bold lg:left-[23rem]">
                 0%
               </span>
             </div>
             {/* Savings */}
-            <div className="flex gap-2 relative lg:mx-auto lg:w-1/2">
-              <span className="border-l-8 border-[#2D2B2B] rounded-full shadow-lg"></span>
+            <div className="relative flex gap-2 lg:mx-auto lg:w-1/2">
+              <span className="rounded-full border-l-8 border-[#2D2B2B] shadow-lg"></span>
               Savings
               <span className="absolute right-0 font-bold lg:left-[23rem]">
                 0%
@@ -96,22 +96,22 @@ const ExpenseV2 = () => {
 
         <div>
           {/* Transaction */}
-          <form className="text-center space-y-3 mt-8 lg:mt-24">
-            <h3 className="text-[#2D3B3B] text-xl font-semibold">
+          <form className="mt-8 space-y-3 text-center lg:mt-24">
+            <h3 className="text-xl font-semibold text-[#2D3B3B]">
               Transaction
             </h3>
-            <div className="flex flex-col gap-y-3 items-center w-full sm:w-[73%] md:w-[47%] lg:w-[70%] mx-auto">
+            <div className="mx-auto flex w-full flex-col items-center gap-y-3 sm:w-[73%] md:w-[47%] lg:w-[70%]">
               <Input
                 type="text"
                 name="expenseType"
                 id="expenseType"
                 placeholder="Salary, House Rent, Buy Bitcoin,..."
-                className="bg-white py-2 px-2 rounded-lg text-black w-[80%] md:mx-auto"
+                className="w-[80%] rounded-lg bg-white py-2 px-2 text-black md:mx-auto"
               />
               <select
                 id="options"
                 name="options"
-                className="w-[80%] py-2 bg-white text-[#2D3B3B] rounded-lg px-2"
+                className="w-[80%] rounded-lg bg-white py-2 px-2 text-[#2D3B3B]"
               >
                 <option value="investment">Investment</option>
                 <option value="expense">Expense</option>
@@ -122,34 +122,34 @@ const ExpenseV2 = () => {
                 name="amount"
                 id="amount"
                 placeholder="Enter Amount"
-                className="bg-white py-2 px-2 rounded-lg text-black w-[80%] md:mx-auto"
+                className="w-[80%] rounded-lg bg-white py-2 px-2 text-black md:mx-auto"
               />
             </div>
             <Input
               type="submit"
               value="Make Transaction"
-              className="bg-[#009176] text-white font-semibold w-[50%] sm:w-[40%] md:w-[25%] lg:w-[40%] py-2 rounded-lg cursor-pointer"
+              className="w-[50%] cursor-pointer rounded-lg bg-[#009176] py-2 font-semibold text-white sm:w-[40%] md:w-[25%] lg:w-[40%]"
             />
           </form>
           {/* History */}
-          <div className="space-y-3 w-[80%] sm:w-[73%] md:w-[47%] lg:w-[60%] mx-auto mt-8 lg:mt-20">
-            <h3 className="text-[#2D3B3B] text-xl font-semibold text-center">
+          <div className="mx-auto mt-8 w-[80%] space-y-3 sm:w-[73%] md:w-[47%] lg:mt-20 lg:w-[60%]">
+            <h3 className="text-center text-xl font-semibold text-[#2D3B3B]">
               History
             </h3>
             <div className="flex flex-col text-[#2D3B3B]">
-              <div className="font-semibold border-r-[7px] py-1 rounded-lg border-yellow-500 shadow-lg bg-white relative w-full mx-auto">
+              <div className="relative mx-auto w-full rounded-lg border-r-[7px] border-yellow-500 bg-white py-1 font-semibold shadow-lg">
                 <AiOutlineDelete className="absolute top-2 left-1" />
                 <p className="text-center">Salary</p>
               </div>
             </div>
             <div className="flex flex-col text-[#2D3B3B]">
-              <div className="font-semibold border-r-[7px] py-1 rounded-lg border-[#ff6384] shadow-lg bg-white relative w-full mx-auto">
+              <div className="relative mx-auto w-full rounded-lg border-r-[7px] border-[#ff6384] bg-white py-1 font-semibold shadow-lg">
                 <AiOutlineDelete className="absolute top-2 left-1" />
                 <p className="text-center">Expense</p>
               </div>
             </div>
             <div className="flex flex-col text-[#2D3B3B]">
-              <div className="font-semibold border-r-[7px] py-1 rounded-lg border-[#2D3B3B] shadow-lg bg-white relative w-full mx-auto">
+              <div className="relative mx-auto w-full rounded-lg border-r-[7px] border-[#2D3B3B] bg-white py-1 font-semibold shadow-lg">
                 <AiOutlineDelete className="absolute top-2 left-1" />
                 <p className="text-center">Buy Crypto</p>
               </div>

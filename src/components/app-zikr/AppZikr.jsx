@@ -51,19 +51,19 @@ const AppZikr = () => {
   };
 
   return (
-    <section className="relative text-[#0D0D0D] font-exo py-[5vh]">
+    <section className="relative py-[5vh] font-exo text-[#0D0D0D]">
       <Toaster />
-      <div className="flex flex-col justify-center items-center my-[10vh]">
+      <div className="my-[10vh] flex flex-col items-center justify-center">
         <img src={pict} className="h-[18rem]" />
         <div className="flex flex-col items-center gap-y-3">
-          <h3 className="text-xl mt-3 font-exo">Total Zikr: {countTotal} </h3>
+          <h3 className="mt-3 font-exo text-xl">Total Zikr: {countTotal} </h3>
           <p className="text-4xl font-bold">{word}</p>
-          <p className="text-xl font-exo">{countSyahada}x</p>
+          <p className="font-exo text-xl">{countSyahada}x</p>
         </div>
         <div className="w-full text-center">
           <Button
             text={textButton}
-            className="bg-[#009176] text-white font-bold font-exo mt-5"
+            className="mt-5 bg-[#009176] font-exo font-bold text-white"
             onClick={handleIncrement}
           />
         </div>

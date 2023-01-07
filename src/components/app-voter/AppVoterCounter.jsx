@@ -25,20 +25,20 @@ function AppVoterCounter({ name }) {
   };
 
   return (
-    <div className="text-slate-100 bg-gradient-to-r from-[#560421] to-[#56042C] py-16 px-16 rounded-xl space-y-2">
+    <div className="space-y-2 rounded-xl bg-gradient-to-r from-[#560421] to-[#56042C] py-16 px-16 text-slate-100">
       <Toaster />
       <p className="text-3xl">{name}</p>
       <p>Votes: {voteCount}</p>
-      <div className="flex flex-col space-y-2 h-full inset-x-0 bottom-0">
+      <div className="inset-x-0 bottom-0 flex h-full flex-col space-y-2">
         <Button
           onClick={handleIncrement}
           text="Vote"
-          className="font-acumin font-bold bg-green-400 text-[#0D0D0D] px-16"
+          className="bg-green-400 px-16 font-acumin font-bold text-[#0D0D0D]"
         />
         <Button
           onClick={handleDecrement}
           text="Remove Vote"
-          className="font-acumin font-bold bg-red-500 text-[#0D0D0D]"
+          className="bg-red-500 font-acumin font-bold text-[#0D0D0D]"
         />
       </div>
     </div>

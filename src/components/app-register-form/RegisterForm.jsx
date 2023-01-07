@@ -69,15 +69,15 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="card bg-[#0D0D0D] rounded-3xl font-exo">
+    <div className="card rounded-3xl bg-[#0D0D0D] font-exo">
       <Toaster />
       <form className="w-full max-w-sm" onSubmit={onSubmit}>
         {/* Full Name */}
-        <div className="md:flex md:items-center mb-6">
+        <div className="mb-6 md:flex md:items-center">
           <div className="md:w-1/3">
             <InputLabel
               htmlFor="fullname"
-              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+              className="block pr-4 mb-1 font-bold text-gray-500 md:mb-0 md:text-right"
               text="Full Name"
             />
           </div>
@@ -87,18 +87,18 @@ const RegisterForm = () => {
               name="fullname"
               id="fullname"
               placeholder="Uvuvwevweve Ossas"
-              className="bg-slate-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-[#00C78E]"
+              className="w-full appearance-none rounded border-2 border-gray-200 bg-slate-100 py-2 px-4 leading-tight text-gray-700 focus:border-[#00C78E] focus:bg-white focus:outline-none"
               value={name}
               onChange={(event) => setName(event.target.value)}
             />
           </div>
         </div>
         {/* email */}
-        <div className="md:flex md:items-center mb-6">
+        <div className="mb-6 md:flex md:items-center">
           <div className="md:w-1/3">
             <InputLabel
               htmlFor="email"
-              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+              className="block pr-4 mb-1 font-bold text-gray-500 md:mb-0 md:text-right"
               text="Email"
             />
           </div>
@@ -108,18 +108,18 @@ const RegisterForm = () => {
               name="email"
               id="email"
               placeholder="example2@yandex.ru"
-              className="bg-slate-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-[#00C78E]"
+              className="w-full appearance-none rounded border-2 border-gray-200 bg-slate-100 py-2 px-4 leading-tight text-gray-700 focus:border-[#00C78E] focus:bg-white focus:outline-none"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
           </div>
         </div>
         {/* Password */}
-        <div className="md:flex md:items-center mb-6">
+        <div className="mb-6 md:flex md:items-center">
           <div className="md:w-1/3">
             <InputLabel
               htmlFor="password"
-              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+              className="block pr-4 mb-1 font-bold text-gray-500 md:mb-0 md:text-right"
               text="Password"
             />
           </div>
@@ -129,18 +129,18 @@ const RegisterForm = () => {
               name="password"
               id="password"
               placeholder="********"
-              className="bg-slate-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-[#00C78E]"
+              className="w-full appearance-none rounded border-2 border-gray-200 bg-slate-100 py-2 px-4 leading-tight text-gray-700 focus:border-[#00C78E] focus:bg-white focus:outline-none"
               value={pass}
               onChange={(event) => setPass(event.target.value)}
             />
           </div>
         </div>
         {/* Confirm Password */}
-        <div className="md:flex md:items-center mb-6">
+        <div className="mb-6 md:flex md:items-center">
           <div className="md:w-1/3">
             <InputLabel
               htmlFor="confirmpassword"
-              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+              className="block pr-4 mb-1 font-bold text-gray-500 md:mb-0 md:text-right"
               text="Confirm Password"
             />
           </div>
@@ -150,19 +150,19 @@ const RegisterForm = () => {
               name="confirmpassword"
               id="confirmpassword"
               placeholder="********"
-              className="bg-slate-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-[#00C78E]"
+              className="w-full appearance-none rounded border-2 border-gray-200 bg-slate-100 py-2 px-4 leading-tight text-gray-700 focus:border-[#00C78E] focus:bg-white focus:outline-none"
               value={confirmPass}
               onChange={(event) => setConfirmPass(event.target.value)}
             />
           </div>
         </div>
-        <div className="flex mb-6 text-center justify-center">
-          <label className="md:w-2/3 block text-gray-500 font-bold">
+        <div className="flex justify-center mb-6 text-center">
+          <label className="block font-bold text-gray-500 md:w-2/3">
             <Input type="checkbox" id="checkbox" className="mr-2" />
             <span className="text-sm">
               I agree to the terms and conditions.
             </span>
-            <p className="text-center p-1 text-slate-50">{word}</p>
+            <p className="p-1 text-center text-slate-50">{word}</p>
           </label>
         </div>
         {/* Sign Up Button */}
@@ -170,7 +170,7 @@ const RegisterForm = () => {
           <Input
             type="submit"
             value="Sign Up"
-            className="w-1/2 bg-[#009176] hover:bg-[#00A888] active:bg-[#009176] text-white font-bold py-2 px-4 rounded text-xl transition ease-in-out active:scale-95 cursor-pointer"
+            className="w-1/2 cursor-pointer rounded bg-[#009176] py-2 px-4 text-xl font-bold text-white transition ease-in-out hover:bg-[#00A888] active:scale-95 active:bg-[#009176]"
           />
         </div>
       </form>

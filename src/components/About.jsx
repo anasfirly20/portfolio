@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen relative w-full font-exo text-[#2D2B2B] p-2"
+      className="relative min-h-screen w-full p-2 font-exo text-[#2D2B2B]"
     >
       <motion.div
         className="my-10 text-center"

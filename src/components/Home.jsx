@@ -11,20 +11,20 @@ const Home = () => {
 
   return (
     <motion.section
-      className="text-gray-600 body-font font-exo min-h-[70vh]"
+      className="min-h-[70vh] font-exo"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full flex flex-wrap px-[6vw] my-[10vh] lg:px-[10vw] justify-center items-center">
+      <div className="my-[10vh] flex w-full flex-wrap items-center justify-center px-[6vw] lg:px-[10vw]">
         {/* TITLE */}
         <div className="w-[100%] md:w-[40%] lg:w-[40%]">
-          <h1 className="text-4xl mb-[2vh] font-semibold text-[#2D2B2B]">
+          <h1 className="mb-[2vh] text-4xl font-semibold text-[#2D2B2B]">
             Hi there! 👋
             <br /> I am <span className="mt-10 font-extrabold">Firly</span>
           </h1>
-          <p className="mb-[2vh] leading-relaxed font-semibold text-[#484645] text-left">
+          <p className="mb-[2vh] text-left font-semibold leading-relaxed text-[#484645]">
             As a new web developer with a strong foundation in HTML, CSS, and
             JavaScript, and proficiency in React and Tailwind CSS. I am
             dedicated to delivering high-quality work and continuously learning
@@ -34,12 +34,12 @@ const Home = () => {
           </p>
           <button
             onClick={() => navigate("/project")}
-            className="relative inline-flex items-center justify-start py-2 pl-4 pr-12 overflow-hidden font-semibold text-[#e1dfde] bg-[#2D2B2B] transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 group border-none"
+            className="group relative inline-flex items-center justify-start overflow-hidden rounded border-none bg-[#2D2B2B] py-2 pl-4 pr-12 font-semibold text-[#e1dfde] transition-all duration-150 ease-in-out hover:pl-10 hover:pr-6"
           >
-            <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-[#009176] group-hover:h-full"></span>
+            <span className="absolute bottom-0 left-0 h-1 w-full bg-[#009176] transition-all duration-150 ease-in-out group-hover:h-full"></span>
             <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
               <svg
-                className="w-5 h-5 text-[#e1dfde]"
+                className="h-5 w-5 text-[#e1dfde]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -53,9 +53,9 @@ const Home = () => {
                 ></path>
               </svg>
             </span>
-            <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+            <span className="absolute left-0 -translate-x-12 pl-2.5 duration-200 ease-out group-hover:translate-x-0">
               <svg
-                className="w-5 h-5 text-[#e1dfde]"
+                className="h-5 w-5 text-[#e1dfde]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -76,9 +76,9 @@ const Home = () => {
         </div>
 
         {/* IMG */}
-        <div className="w-[450px] md:w-[50%] lg:w-[40%] mx-auto max-md:mt-8">
+        <div className="mx-auto w-[450px] max-md:mt-8 md:w-[50%] lg:w-[40%]">
           <img
-            className="object-cover object-center w-full rounded"
+            className="w-full rounded object-cover object-center"
             alt="hero"
             src={img}
           />

@@ -1,7 +1,7 @@
 const AppCalculatorDisplay = () => {
   return (
     <div
-      className="w-full text-slate-50 text-5xl h-[10rem] flex items-end justify-end rounded-t-xl px-5"
+      className="flex h-[10rem] w-full items-end justify-end rounded-t-xl px-5 text-5xl text-slate-50"
       htmlFor="total"
     >
       0

@@ -7,8 +7,8 @@ const NotFound = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="min-h-screen relative font-exo p-5">
-      <div className="flex flex-col min-h-screen space-y-10 items-center justify-center">
+    <section className="relative min-h-screen p-5 font-exo">
+      <div className="flex min-h-screen flex-col items-center justify-center space-y-10">
         <h1 className="text-center text-[#0D0D0D] ">Whoops...</h1>
         <img src={logo} alt="404 error image" className="h-[20rem]" />
         <h1 className="text-center text-[#0D0D0D] ">Page Not Found</h1>
