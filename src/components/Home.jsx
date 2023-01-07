@@ -24,7 +24,7 @@ const Home = () => {
             Hi there! 👋
             <br /> I am <span className="mt-10 font-extrabold">Firly</span>
           </h1>
-          <p className="mb-[2vh] text-left font-semibold leading-relaxed text-[#484645]">
+          <p className="relative mb-[2vh] text-left font-semibold leading-relaxed text-[#484645] ">
             As a new web developer with a strong foundation in HTML, CSS, and
             JavaScript, and proficiency in React and Tailwind CSS. I am
             dedicated to delivering high-quality work and continuously learning

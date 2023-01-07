@@ -48,14 +48,14 @@ const config = {
 
 const ExpenseV2 = () => {
   return (
-    <section className="mx-[4vw] mb-[4vh] min-h-screen font-exo">
-      <h1 className="mx-4 mt-10 rounded-md border-2 bg-[#2D2B2B] py-3 text-center text-4xl text-[#E1DFDE] sm:mx-16 md:mx-20 lg:mx-32">
+    <section className="mx-[6vw] my-[6vh] font-exo">
+      <h1 className="rounded-md border-2 bg-[#2D2B2B] py-3 text-center text-4xl text-[#E1DFDE] sm:mx-16 md:mx-20 lg:mx-32">
         Expense Tracker v2.0
       </h1>
-      <div className="lg:grid lg:grid-cols-2">
+      <div className="w-full lg:grid lg:grid-cols-2">
         {/* Doughnut Chart */}
         <div className="">
-          <div className="lg:text- mt-10 text-center text-2xl text-[#2D2B2B]">
+          <div className=" mt-10 text-center text-2xl text-[#2D2B2B]">
             <div className="relative top-[40%] mx-auto h-[24rem] w-[23rem] sm:h-[25rem] sm:w-[25rem] lg:mx-auto">
               <Doughnut {...config} />
               <h3 className="absolute right-0 left-0 top-[45%] font-bold lg:right-40 lg:left-40">
@@ -66,28 +66,28 @@ const ExpenseV2 = () => {
           </div>
 
           {/* Masuk dari History */}
-          <div className="mx-auto mt-10 flex flex-col space-y-3 font-semibold text-[#2D3B3B] sm:w-[73%] md:w-[47%] lg:w-[100%]">
+          <div className="mt-10 flex w-[100%] flex-col space-y-3 px-[6vw] font-semibold text-[#2D3B3B] sm:mx-auto sm:w-[73%] lg:w-[]">
             {/* Investment */}
-            <div className="relative flex gap-2 lg:mx-auto lg:w-1/2">
-              <span className="rounded-full border-l-8 border-l-yellow-500 shadow-lg"></span>
+            <div className="relative flex gap-2 lg:mx-auto lg:w-[100%]">
+              <span className="border-l-8 rounded-full shadow-lg border-l-yellow-500"></span>
               Investment
-              <span className="absolute right-0 font-bold lg:left-[23rem]">
+              <span className="absolute right-0 font-bold lg:left-[100%]">
                 0%
               </span>
             </div>
             {/* Expense */}
-            <div className="relative flex gap-2 lg:mx-auto lg:w-1/2">
+            <div className="relative flex gap-2 lg:mx-auto lg:w-[100%]">
               <span className="rounded-full border-l-8 border-[#ff6384] shadow-2xl"></span>
               Expense
-              <span className="absolute right-0 font-bold lg:left-[23rem]">
+              <span className="absolute right-0 font-bold lg:left-[100%]">
                 0%
               </span>
             </div>
             {/* Savings */}
-            <div className="relative flex gap-2 lg:mx-auto lg:w-1/2">
+            <div className="relative flex gap-2 lg:mx-auto lg:w-[100%]">
               <span className="rounded-full border-l-8 border-[#2D2B2B] shadow-lg"></span>
               Savings
-              <span className="absolute right-0 font-bold lg:left-[23rem]">
+              <span className="absolute right-0 font-bold lg:left-[100%]">
                 0%
               </span>
             </div>
