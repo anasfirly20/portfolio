@@ -17,15 +17,12 @@ const Home = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full flex px-[6vw] my-[10vh] lg:px-[10vw] justify-center flex-wrap md:flex-row items-center">
+      <div className="w-full flex flex-wrap px-[6vw] my-[10vh] lg:px-[10vw] justify-center items-center">
         {/* TITLE */}
         <div className="w-[100%] md:w-[40%] lg:w-[40%]">
-          <h1 className="text-4xl mb-[2vh] font-semibold text-[#2D2B2B] text-start">
+          <h1 className="text-4xl mb-[2vh] font-semibold text-[#2D2B2B]">
             Hi there! 👋
-            <span classNameName="max-md:ml-[3vw]">
-              <br className="hidden md:inline-block" /> I am{" "}
-              <span classNameName="font-bold">Firly</span>
-            </span>
+            <br /> I am <span className="mt-10 font-extrabold">Firly</span>
           </h1>
           <p className="mb-[2vh] leading-relaxed font-semibold text-[#484645] text-left">
             As a new web developer with a strong foundation in HTML, CSS, and
