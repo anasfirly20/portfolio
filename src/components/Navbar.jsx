@@ -41,7 +41,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-10 w-full flex justify-between h-[80px] px-[4vw] md:px-15 lg:px-20 bg-[#e1dfde] border-b-[3px] border-b-[#565759] border-opacity-10 font-exo font-bold">
+    <nav className="sticky top-0 z-10 w-full flex justify-between h-[80px] px-[6vw] lg:px-[10vw] bg-[#e1dfde] border-b-[3px] border-b-[#565759] border-opacity-10 font-exo font-bold">
       {/* logo */}
       <div className="block my-auto">
         <p
@@ -53,7 +53,7 @@ const Navbar = () => {
       </div>
 
       {/* Nav menu */}
-      <ul className="hidden md:flex items-center gap-x-8 uppercase ml-[12vw]">
+      <ul className="hidden md:flex items-center gap-x-8 uppercase ml-[8vw]">
         {navItems.map(({ path, label }) => (
           <li key={label}>
             <NavLink

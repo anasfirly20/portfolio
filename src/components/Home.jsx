@@ -17,15 +17,17 @@ const Home = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      <div class="w-full flex px-[4vw] my-[10vh] justify-center flex-wrap md:flex-row items-center">
+      <div class="w-full flex px-[6vw] my-[10vh] lg:px-[10vw] justify-center flex-wrap md:flex-row items-center">
         {/* TITLE */}
         <div class="w-[100%] md:w-[40%] lg:w-[40%]">
           <h1 class="text-4xl mb-[2vh] font-semibold text-[#2D2B2B] text-start">
             Hi there! 👋
-            <br class="md:inline-block" /> I am{" "}
-            <span className="font-bold">Firly</span>
+            <span className="max-md:ml-[3vw]">
+              <br class="hidden md:inline-block" /> I am{" "}
+              <span className="font-bold">Firly</span>
+            </span>
           </h1>
-          <p class="mb-[2vh] leading-relaxed font-semibold text-[#484645] text-left relative">
+          <p class="mb-[2vh] leading-relaxed font-semibold text-[#484645] text-left">
             As a new web developer with a strong foundation in HTML, CSS, and
             JavaScript, and proficiency in React and Tailwind CSS. I am
             dedicated to delivering high-quality work and continuously learning
