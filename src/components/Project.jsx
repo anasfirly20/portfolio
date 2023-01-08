@@ -13,8 +13,8 @@ const Project = () => {
         transition={{ duration: 1 }}
       >
         <div className="mt-10 flex flex-col">
-          <h1 className="p-5 text-center font-semibold text-[#0D0D0D]">
-            Created with react
+          <h1 className="p-5 text-center font-semibold text-[#0D0D0D] ">
+            React Projects
           </h1>
           <ProjectList />
         </div>

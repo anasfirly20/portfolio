@@ -8,15 +8,8 @@ import Project from "./components/Project";
 import About from "./components/About";
 import Credits from "./components/Credits";
 
-// Apps
-import Todo from "./components/app-to-do/Todo";
-import AppZikr from "./components/app-zikr/AppZikr";
-import AppRegisForm from "./components/app-register-form/AppRegisForm";
-import AppExpenseTracker from "./components/app-expense-tracker/AppExpenseTracker";
-import AppCalculator from "./components/app-calculator/AppCalculator";
-import AppVoter from "./components/app-voter/AppVoter";
-import ReduxTest from "./components/ReduxTest";
-import ExpenseV2 from "./components/app-expense-tracker-v2/ExpenseV2";
+// Route for child of projects (applications)
+import { ProjectChild } from "./Routes/project-child/ProjectChild";
 
 // miscellanous components
 import Navbar from "../src/components/Navbar/Navbar";
@@ -47,17 +40,13 @@ const App = () => {
           <Navbar />
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
-            {/* Nested Projects Route */}
             <Route path="/project">
+              {/* Project Parent */}
               <Route index element={<Project />} />
-              <Route path="zikr-app" element={<AppZikr />} />
-              <Route path="registration-form" element={<AppRegisForm />} />
-              <Route path="expense-tracker" element={<AppExpenseTracker />} />
-              <Route path="to-do-app" element={<Todo />} />
-              <Route path="calculator-app" element={<AppCalculator />} />
-              <Route path="voter-app" element={<AppVoter />} />
-              <Route path="expense-tracker-v2" element={<ExpenseV2 />} />
-              <Route path="redux-test" element={<ReduxTest />} />
+              {/* Project Child */}
+              {ProjectChild.map(({ id, path, element }) => {
+                return <Route key={id} path={path} element={element} />;
+              })}
             </Route>
             <Route path="/about" element={<About />} />
             <Route path="/credits" element={<Credits />} />
