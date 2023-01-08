@@ -5,7 +5,7 @@ import logo from "../../assets/join-us-3.svg";
 
 const AppRegisForm = () => {
   return (
-    <section className="mb-[5vh] w-full font-exo">
+    <section className="mb-[5vh] px-[6vw] w-full font-exo">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

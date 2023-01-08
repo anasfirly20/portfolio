@@ -22,11 +22,11 @@ const ExpenseTracker = () => {
   };
 
   return (
-    <section className="mb-[12vh] w-full px-[4vw] font-exo text-[#2D2B2B]">
-      <h1 className="mt-5 text-center text-2xl font-semibold">
+    <section className="mb-[15vh] w-full px-[6vw] font-exo text-[#2D2B2B]">
+      <h1 className="mt-10 mb-10 text-center text-2xl font-semibold">
         Expense Tracker
       </h1>
-      <div className="card mx-auto mt-5 flex h-full w-96 flex-col space-y-5">
+      <div className="mx-auto mt-5 flex h-full flex-col space-y-5 px-[6vw] md:px-0 md:w-[30rem]">
         {/* Balance */}
         <div className="flex flex-col text-2xl">
           <h2 className="text-sm font-semibold uppercase">Your Balance</h2>

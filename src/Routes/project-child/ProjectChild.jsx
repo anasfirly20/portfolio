@@ -5,11 +5,11 @@ import AppRegisForm from "../../components/app-register-form/AppRegisForm";
 import AppExpenseTracker from "../../components/app-expense-tracker/AppExpenseTracker";
 import AppCalculator from "../../components/app-calculator/AppCalculator";
 import AppVoter from "../../components/app-voter/AppVoter";
-import ReduxTest from "../../components/ReduxTest";
 import ExpenseV2 from "../../components/app-expense-tracker-v2/ExpenseV2";
 
-// experiment
-import Experiment from "../../components/Experiment";
+// Sandbox
+import Sandbox from "../../components/Sandbox";
+import ReduxTest from "../../components/ReduxTest";
 
 // Route for child of projects (applications)
 export const ProjectChild = [
@@ -55,7 +55,7 @@ export const ProjectChild = [
   },
   {
     id: 9,
-    path: "experiment",
-    element: <Experiment />,
+    path: "Sandbox",
+    element: <Sandbox />,
   },
 ];

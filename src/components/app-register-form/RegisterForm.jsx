@@ -69,7 +69,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="card rounded-3xl bg-[#0D0D0D] font-exo">
+    <div className="rounded-3xl bg-[#0D0D0D] font-exo p-[2em]">
       <Toaster />
       <form className="w-full max-w-sm" onSubmit={onSubmit}>
         {/* Full Name */}
