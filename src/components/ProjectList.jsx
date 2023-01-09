@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const ProjectList = () => {
-  let projects = [
+  const projects = [
     "Zikr App",
     "Registration Form",
     "Expense Tracker",
@@ -12,6 +12,7 @@ const ProjectList = () => {
     // "Voter App",
     // "Expense Tracker-v2",
     // "Redux-Test",
+    // "Sandbox"
   ];
 
   return (

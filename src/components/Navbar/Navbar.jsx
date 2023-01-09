@@ -13,6 +13,11 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => {
     setNav(!nav);
+    if (!nav) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
   };
 
   let navigate = useNavigate();
@@ -20,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-10 flex h-[80px] w-full justify-between border-b-[3px] border-b-[#565759] border-opacity-10 bg-[#e1dfde] px-[6vw] font-exo font-bold lg:px-[10vw]">
       {/* logo */}
-      <div className="my-auto block">
+      <div className={nav ? "z-50 my-auto block" : "my-auto block"}>
         <p
           className="cursor-pointer text-[#54433A]"
           onClick={() => navigate("/")}
@@ -57,20 +62,20 @@ const Navbar = () => {
 
       {/* Hamburger Menu */}
       <motion.div
-        className="z-20 my-auto cursor-pointer text-3xl text-[#2D2B2B] md:hidden"
+        className="z-50 my-auto cursor-pointer text-3xl text-[#2D2B2B] md:hidden"
         onClick={handleClick}
         animate={{ scale: nav ? 1 : 1, rotate: nav ? 90 : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
-        {!nav ? <FiMenu /> : <GrClose />}
+        {nav ? <GrClose /> : <FiMenu />}
       </motion.div>
 
       {/* Mobile Menu */}
       <ul
         className={
-          !nav
-            ? "hidden"
-            : "absolute top-0 left-0 z-10 flex min-h-screen w-full flex-col items-center justify-center bg-[#e1dfde] uppercase text-[#2D2B2B]"
+          nav
+            ? "absolute top-0 left-0 z-40 flex min-h-screen w-full flex-col items-center justify-center bg-[#e1dfde] uppercase text-[#2D2B2B] duration-300 ease-in"
+            : "absolute top-0 left-[-100%] h-screen transition duration-500 ease-in"
         }
       >
         {NavItems.map(({ path, label }) => (
