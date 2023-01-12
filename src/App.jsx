@@ -3,10 +3,10 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 
 // route components
-import Home from "./components/Home";
-import Project from "./components/Project";
-import About from "./components/About";
-import Credits from "./components/Credits";
+import Home from "./pages/home/Home";
+import Project from "./pages/project/Project";
+import About from "./pages/about/About";
+import Credits from "./pages/credits/Credits";
 
 // Route for child of projects (applications)
 import { ProjectChild } from "./Routes/project-child/ProjectChild";
@@ -14,7 +14,7 @@ import { ProjectChild } from "./Routes/project-child/ProjectChild";
 // miscellanous components
 import Navbar from "../src/components/Navbar/Navbar";
 import Footer from "../src/components/Footer/Footer";
-import NotFound from "./components/NotFound";
+import NotFound from "./pages/not-found/NotFound";
 
 // Preloader
 import Preloader from "./components/Preloader/Preloader";

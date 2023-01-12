@@ -1,11 +1,11 @@
 // Apps
-import Todo from "../../components/app-to-do/Todo";
-import AppZikr from "../../components/app-zikr/AppZikr";
-import AppRegisForm from "../../components/app-register-form/AppRegisForm";
-import AppExpenseTracker from "../../components/app-expense-tracker/AppExpenseTracker";
-import AppCalculator from "../../components/app-calculator/AppCalculator";
-import AppVoter from "../../components/app-voter/AppVoter";
-import ExpenseV2 from "../../components/app-expense-tracker-v2/ExpenseV2";
+import Todo from "../../pages/project/app-to-do/Todo";
+import AppZikr from "../../pages/project/app-zikr/AppZikr";
+import AppRegisForm from "../../pages/project/app-register-form/AppRegisForm";
+import AppExpenseTracker from "../../pages/project/app-expense-tracker/AppExpenseTracker";
+import AppCalculator from "../../pages/project/app-calculator/AppCalculator";
+import AppVoter from "../../pages/project/app-voter/AppVoter";
+import ExpenseV2 from "../../pages/project/app-expense-tracker-v2/ExpenseV2";
 
 // Sandbox
 import Sandbox from "../../components/Sandbox";
