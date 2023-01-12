@@ -1,12 +1,7 @@
 import React from "react";
-import './SandBox.css'
 
 const Sandbox = () => {
-  return (
-<>
-
-    </>
-  );
+  return <></>;
 };
 
 export default Sandbox;
