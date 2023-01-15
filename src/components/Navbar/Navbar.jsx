@@ -6,6 +6,8 @@ import { FiMenu } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import logo from "../../assets/af-logo.png";
 
+import { Squash, Divide, Turn } from "hamburger-react";
+
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -61,14 +63,29 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger Menu */}
-      <motion.div
+      <div
         className="z-50 my-auto cursor-pointer text-3xl text-[#2D2B2B] md:hidden"
         onClick={handleClick}
-        animate={{ scale: nav ? 1 : 1, rotate: nav ? 90 : 0 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
       >
-        {nav ? <GrClose /> : <FiMenu />}
-      </motion.div>
+        {nav ? (
+          <Squash
+            size={30}
+            duration={0.3}
+            color="#2D2B2B"
+            easing="ease-in"
+            rounded
+          />
+        ) : (
+          <Squash
+            toggled={nav}
+            size={30}
+            duration={0.3}
+            color="#2D2B2B"
+            easing="ease-in"
+            rounded
+          />
+        )}
+      </div>
 
       {/* Mobile Menu */}
       <ul

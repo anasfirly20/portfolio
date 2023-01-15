@@ -9,7 +9,7 @@ import About from "./pages/about/About";
 import Credits from "./pages/credits/Credits";
 
 // Route for child of projects (applications)
-import { ProjectChild } from "./Routes/project-child/ProjectChild";
+import { ProjectChild } from "./routes/project-child/ProjectChild";
 
 // miscellanous components
 import Navbar from "../src/components/Navbar/Navbar";
