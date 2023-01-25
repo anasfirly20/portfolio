@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <motion.section
-      className="min-h-[70vh] font-exo"
+      className="min-h-screen font-exo"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

@@ -13,65 +13,101 @@ const notifyCheckBox = () =>
 
 const RegisterForm = () => {
   const [word, setWord] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const [confirmPass, setConfirmPass] = useState("");
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [pass, setPass] = useState("");
+  // const [confirmPass, setConfirmPass] = useState("");
+  // const [buttonLoading, setButtonLoading] = useState(false);
+  // const [send, setSend] = useState();
 
-  useEffect(() => {
-    const allFieldsFilled =
-      name.length && email.length && pass.length && confirmPass.length;
-    const allFieldsEmpty =
-      !name.length && !email.length && !pass.length && !confirmPass.length;
+  const [mailerState, setMailerState] = useState({
+    fullname: "",
+    email: "",
+    pass: "",
+    confirmpass: "",
+  });
 
-    if (allFieldsFilled) {
-      setWord("Ready to Sign Up ✅");
-    } else if (allFieldsEmpty) {
-      setWord("*All Fields Required");
-    } else {
-      setWord("*All Fields Required");
-    }
-  }, [name, email, pass, confirmPass]);
+  function handleStateChange(e) {
+    setMailerState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  }
+
+  const submitEmail = async (e) => {
+    e.preventDefault();
+    console.log({ mailerState });
+    const response = await fetch("http://localhost:3001/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ mailerState }),
+    })
+      .then((res) => res.json())
+      .then(async (res) => {
+        const resData = await res;
+        console.log(resData);
+        if (resData.status === "success") {
+          alert("Message Sent");
+        } else if (resData.status === "fail") {
+          alert("Message failed to send");
+        }
+      })
+      .then(() => {
+        setMailerState({
+          fullname: "",
+          email: "",
+          pass: "",
+          confirmpass: "",
+        });
+      });
+  };
+
+  // useEffect(() => {
+  //   const allFieldsFilled =
+  //     name.length && email.length && pass.length && confirmPass.length;
+  //   const allFieldsEmpty =
+  //     !name.length && !email.length && !pass.length && !confirmPass.length;
+
+  //   if (allFieldsFilled) {
+  //     setWord("Ready to Sign Up ✅");
+  //   } else if (allFieldsEmpty) {
+  //     setWord("*All Fields Required");
+  //   } else {
+  //     setWord("*All Fields Required");
+  //   }
+  // }, [name, email, pass, confirmPass]);
 
   // Function for submit button
-  const onSubmit = (e) => {
-    e.preventDefault();
+  // const onSubmit = (e) => {
+  //   e.preventDefault();
 
-    if (name.length && email.length && pass.length && confirmPass.length) {
-      if (document.getElementById("checkbox").checked) {
-        if (pass !== confirmPass) {
-          notifyPassNotMatch();
-        } else {
-          notifySuccess();
-        }
-      } else {
-        notifyCheckBox();
-      }
-    } else {
-      notifyFail();
-    }
+  //   if (name.length && email.length && pass.length && confirmPass.length) {
+  //     if (document.getElementById("checkbox").checked) {
+  //       if (pass !== confirmPass) {
+  //         notifyPassNotMatch();
+  //       } else {
+  //         sendEmail({ fullName, email, pass, confirmPass, setSend });
+  //         notifySuccess();
+  //       }
+  //     } else {
+  //       notifyCheckBox();
+  //     }
+  //   } else {
+  //     notifyFail();
+  //   }
 
-    emailjs
-      .sendForm("gmail", "template_v97pp3e", e.target, "DRhkfav3kde6rcZ-n")
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-
-    setName("");
-    setEmail("");
-    setPass("");
-    setConfirmPass("");
-  };
+  //   setName("");
+  //   setEmail("");
+  //   setPass("");
+  //   setConfirmPass("");
+  // };
 
   return (
     <div className="rounded-3xl bg-[#0D0D0D] p-[2em] font-exo">
       <Toaster />
-      <form className="w-full max-w-sm" onSubmit={onSubmit}>
+      <form className="w-full max-w-sm" onSubmit={submitEmail}>
         {/* Full Name */}
         <div className="mb-6 md:flex md:items-center">
           <div className="md:w-1/3">
@@ -88,8 +124,8 @@ const RegisterForm = () => {
               id="fullname"
               placeholder="Uvuvwevweve Ossas"
               className="w-full appearance-none rounded border-2 border-gray-200 bg-slate-100 py-2 px-4 leading-tight text-gray-700 focus:border-[#00C78E] focus:bg-white focus:outline-none"
-              value={name}
-              onChange={(event) => setName(event.target.value)}
+              value={mailerState.fullname}
+              onChange={handleStateChange}
             />
           </div>
         </div>
@@ -104,13 +140,13 @@ const RegisterForm = () => {
           </div>
           <div className="md:w-2/3">
             <Input
-              type="email"
+              type="text"
               name="email"
               id="email"
               placeholder="example2@yandex.ru"
               className="w-full appearance-none rounded border-2 border-gray-200 bg-slate-100 py-2 px-4 leading-tight text-gray-700 focus:border-[#00C78E] focus:bg-white focus:outline-none"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
+              value={mailerState.email}
+              onChange={handleStateChange}
             />
           </div>
         </div>
@@ -126,12 +162,12 @@ const RegisterForm = () => {
           <div className="md:w-2/3">
             <Input
               type="password"
-              name="password"
+              name="pass"
               id="password"
               placeholder="********"
               className="w-full appearance-none rounded border-2 border-gray-200 bg-slate-100 py-2 px-4 leading-tight text-gray-700 focus:border-[#00C78E] focus:bg-white focus:outline-none"
-              value={pass}
-              onChange={(event) => setPass(event.target.value)}
+              value={mailerState.pass}
+              onChange={handleStateChange}
             />
           </div>
         </div>
@@ -147,12 +183,12 @@ const RegisterForm = () => {
           <div className="md:w-2/3">
             <Input
               type="password"
-              name="confirmpassword"
+              name="confirmpass"
               id="confirmpassword"
               placeholder="********"
               className="w-full appearance-none rounded border-2 border-gray-200 bg-slate-100 py-2 px-4 leading-tight text-gray-700 focus:border-[#00C78E] focus:bg-white focus:outline-none"
-              value={confirmPass}
-              onChange={(event) => setConfirmPass(event.target.value)}
+              value={mailerState.confirmpass}
+              onChange={handleStateChange}
             />
           </div>
         </div>
@@ -179,3 +215,10 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
+
+// emailjs.sendForm(
+//   "gmail",
+//   "template_v97pp3e",
+//   e.target,
+//   "DRhkfav3kde6rcZ-n"
+// );
